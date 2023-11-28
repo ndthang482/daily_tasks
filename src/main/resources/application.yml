@@ -1,0 +1,26 @@
+# Cấu hình cho ứng dụng Daily Tasks
+spring:
+  application:
+    name: daily_tasks
+
+  # Cấu hình JPA và Hibernate
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+
+  # Cấu hình DataSource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/daily_task?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password: admin123
+
+  # Cấu hình Server
+  server:
+    port: 8080
+
+# Cấu hình Logging
+logging:
+  level:
+    org.springframework.transaction: DEBUG
